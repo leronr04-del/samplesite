@@ -1,0 +1,79 @@
+:root {
+    --clay: #D4A373; --moss: #606C38; --forest: #283618;
+    --sand: #FEFAE0; --earth: #BC6C25; --text-dark: #283618;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background-color: var(--sand); color: var(--text-dark); }
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+/* Navigation with Logo Image Support */
+nav {
+    position: fixed; top: 0; width: 100%;
+    background: rgba(254, 250, 224, 0.95);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 5%; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+nav .logo img {
+    height: 50px; /* Adjust based on your logo size */
+    width: auto;
+    display: block;
+}
+
+nav ul { display: flex; list-style: none; align-items: center; }
+nav ul li { margin-left: 1.5rem; }
+nav ul li a { text-decoration: none; color: var(--forest); font-weight: 600; font-size: 0.8rem; letter-spacing: 1px; }
+
+.nav-book-btn {
+    background-color: var(--earth); color: white !important;
+    padding: 0.6rem 1.2rem; border-radius: 2px;
+}
+
+/* Sections General */
+section { padding: 100px 10%; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+h2 { font-size: 3rem; text-align: center; margin-bottom: 3rem; }
+
+/* Hero */
+#home {
+    text-align: center; color: var(--sand);
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-bg.jpg') center/cover;
+}
+#home h1 { font-size: 4.5rem; }
+.cta-btn { 
+    padding: 1rem 2.5rem; background: var(--earth); color: white; 
+    text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;
+}
+
+/* Gallery Grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.grid-item { aspect-ratio: 1/1; overflow: hidden; background: #eee; }
+.grid-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.grid-item:hover img { transform: scale(1.05); }
+
+/* Stylists */
+#stylists { background: var(--clay); }
+.stylist-container { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+.stylist-card { background: var(--sand); width: 350px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.stylist-image { height: 350px; }
+.stylist-image img { width: 100%; height: 100%; object-fit: cover; }
+.stylist-info { padding: 2rem; }
+
+/* Services */
+#services { background: var(--forest); color: var(--sand); }
+.pricing-container { max-width: 600px; margin: 0 auto; width: 100%; }
+.service-item { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 1rem 0; }
+
+/* Shop Info Section */
+#info { background: var(--sand); text-align: center; }
+.info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 2rem; }
+.info-box h3 { color: var(--earth); margin-bottom: 1rem; text-transform: uppercase; font-size: 1rem; }
+
+footer { padding: 2rem; text-align: center; font-size: 0.8rem; opacity: 0.6; }
+
+@media (max-width: 768px) {
+    nav ul { display: none; }
+    #home h1 { font-size: 2.5rem; }
+}
