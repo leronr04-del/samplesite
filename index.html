@@ -1,224 +1,80 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Barber | Portfolio</title>
+    <title>Brit Mens Haircuts | Premium Barbering</title>
+    
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        /* Earth Tone Palette */
-        :root {
-            --clay: #D4A373;      /* Warm Tan */
-            --moss: #606C38;      /* Deep Olive */
-            --forest: #283618;    /* Dark Forest */
-            --sand: #FEFAE0;      /* Off-White/Cream */
-            --earth: #BC6C25;     /* Terracotta */
-            --text-dark: #283618;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--sand);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(254, 250, 224, 0.95);
-            display: flex;
-            justify-content: space-between;
-            padding: 1.5rem 5%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(40, 54, 24, 0.1);
-        }
-
-        nav .logo {
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: var(--forest);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: var(--earth);
-        }
-
-        /* Sections */
-        section {
-            padding: 100px 10%;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        /* Home Section */
-        #home {
-            text-align: center;
-            background: linear-gradient(rgba(40, 54, 24, 0.7), rgba(40, 54, 24, 0.7)), 
-                        url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=1500') no-repeat center center/cover;
-            color: var(--sand);
-        }
-
-        #home h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-        }
-
-        #home p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            font-style: italic;
-        }
-
-        .cta-btn {
-            padding: 1rem 2.5rem;
-            background-color: var(--earth);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            transition: background 0.3s;
-            display: inline-block;
-        }
-
-        .cta-btn:hover {
-            background-color: var(--moss);
-        }
-
-        /* Gallery Section */
-        #gallery h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .grid-item {
-            aspect-ratio: 4/5;
-            background-color: #ddd;
-            overflow: hidden;
-            position: relative;
-            border-radius: 8px;
-        }
-
-        .grid-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-
-        .grid-item:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Services/Pricing */
-        #services {
-            background-color: var(--moss);
-            color: var(--sand);
-        }
-
-        #services h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-        }
-
-        .pricing-container {
-            max-width: 800px;
-            margin: 0 auto;
-            width: 100%;
-        }
-
-        .service-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px dotted rgba(254, 250, 224, 0.3);
-            padding-bottom: 0.5rem;
-        }
-
-        .service-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .price {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            #home h1 { font-size: 2.5rem; }
-            nav ul { display: none; } /* Simplified for vibe/demo */
-        }
-    </style>
+    
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- NAVIGATION -->
     <nav>
-        <div class="logo">Nikki Ashley</div>
+        <div class="logo">Brit Mens Haircuts</div>
         <ul>
             <li><a href="#home">HOME</a></li>
             <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#stylists">STYLISTS</a></li>
             <li><a href="#services">SERVICES</a></li>
+            <li><a href="https://square.site/your-link-here" class="nav-book-btn">BOOK NOW</a></li>
         </ul>
     </nav>
 
+    <!-- HOME SECTION -->
     <section id="home">
-        <h1>Precision & Texture.</h1>
-        <p>Crafting confidence through tailored haircuts.</p>
-        <a href="#services" class="cta-btn">View Services</a>
-    </section>
-
-    <section id="gallery">
-        <h2>Need New Ideas?</h2>
-        <div class="grid">
-            <!-- Placeholder Images for Fades/Cuts -->
-            <div class="grid-item"><img src="https://images.unsplash.com/photo-1630827020718-3433092696e7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bWVucyUyMGhhaXJjdXR8ZW58MHx8MHx8fDA%3D alt="Skin Fade"></div>
-            <div class="grid-item"><img src="https://images.unsplash.com/photo-1576014645501-7adc8b059e2d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHdoaXRlJTIwbWVucyUyMGhhaXJjdXR8ZW58MHx8MHx8fDA%3D" alt="Beard Trim"></div>
-            <div class="grid-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800" alt="Classic Taper"></div>
+        <div class="hero-content">
+            <h1>Brit Mens Haircuts</h1>
+            <p>Elevated grooming. Timeless technique.</p>
+            <a href="https://square.site/your-link-here" class="cta-btn">Book Your Appointment</a>
         </div>
     </section>
 
+    <!-- GALLERY SECTION -->
+    <section id="gallery">
+        <h2>The Portfolio</h2>
+        <div class="grid">
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&q=80&w=800" alt="Skin Fade"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1599351431247-f10b21ce53e1?auto=format&fit=crop&q=80&w=800" alt="Beard Trim"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=800" alt="Classic Taper"></div>
+            <div class="grid-item"><img src="https://images.unsplash.com/photo-1622286332305-2336338f0d9a?auto=format&fit=crop&q=80&w=800" alt="Texture Cut"></div>
+        </div>
+    </section>
+
+    <!-- STYLISTS SECTION -->
+    <section id="stylists">
+        <h2>Meet the Team</h2>
+        <div class="stylist-container">
+            <div class="stylist-card">
+                <div class="stylist-image">
+                    <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&q=80&w=600" alt="Brit">
+                </div>
+                <div class="stylist-info">
+                    <h3>Brit</h3>
+                    <span class="specialty">Master Barber & Founder</span>
+                    <p>With over 10 years in the craft, Brit specializes in classic tapers and precision shear work. A firm believer that a great haircut starts with a thorough consultation.</p>
+                </div>
+            </div>
+
+            <div class="stylist-card">
+                <div class="stylist-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=600" alt="Alex">
+                </div>
+                <div class="stylist-info">
+                    <h3>Alex</h3>
+                    <span class="specialty">Fade Specialist</span>
+                    <p>Alex is the go-to for modern skin fades and creative line-ups. He brings a sharp eye for detail and a passion for the latest grooming trends to every chair session.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
     <section id="services">
         <h2>Services & Pricing</h2>
         <div class="pricing-container">
@@ -227,11 +83,11 @@
                 <span class="price">$45</span>
             </div>
             <div class="service-item">
-                <span class="service-name">Skin Fade & Line Up</span>
+                <span class="service-name">Precision Skin Fade</span>
                 <span class="price">$55</span>
             </div>
             <div class="service-item">
-                <span class="service-name">Beard Sculpting</span>
+                <span class="service-name">Beard Sculpt & Shape</span>
                 <span class="price">$30</span>
             </div>
             <div class="service-item">
@@ -239,9 +95,12 @@
                 <span class="price">$70</span>
             </div>
             <div class="service-item">
-                <span class="service-name">Hot Towel Shave</span>
+                <span class="service-name">Traditional Hot Towel Shave</span>
                 <span class="price">$40</span>
             </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="https://square.site/your-link-here" class="cta-btn secondary">Secure Your Slot</a>
         </div>
     </section>
 
